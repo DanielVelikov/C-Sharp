@@ -1,0 +1,34 @@
+WinMetadata\Windows.winmd
+Assets\LockScreenLogo.scale-200.png
+Assets\SplashScreen.scale-200.png
+Assets\Square150x150Logo.scale-200.png
+Assets\Square44x44Logo.scale-200.png
+Assets\Square44x44Logo.targetsize-24_altform-unplated.png
+Assets\StoreLogo.png
+Assets\Wide310x150Logo.scale-200.png
+App.xbf
+Classes\LogInDialog.xbf
+Classes\LogOfDialog.xbf
+MainPage.xbf
+Pages\Accounting Dialogs\AddTransactionDialog.xbf
+Pages\Accounting Dialogs\UpdateTransactionDialog.xbf
+Pages\AccountingManagementPage.xbf
+Pages\AccountingOverviewPage.xbf
+Pages\CompanyPage.xbf
+Pages\LogIn\CompanySelectionPage.xbf
+Pages\LogIn\FieldSelectionPage.xbf
+Pages\Project Dialogs\AddProjectDialog.xbf
+Pages\Project Dialogs\UpdateProjectDialog.xbf
+Pages\ProjectManagementPage.xbf
+Pages\ProjectOverrviewPage.xbf
+winapp.xr.xml
+Pages\Images\android.png
+Pages\Images\apple.png
+Pages\Images\companyPage.jpg
+Pages\Images\windows.png
+Pages\LogIn\TableImages\generic.jpg
+Pages\LogIn\TableImages\Клауд Услуги.png
+Pages\LogIn\TableImages\ПР.png
+Pages\LogIn\TableImages\Реклама.png
+Pages\LogIn\TableImages\Уеб приложения.png
+Properties\Default.rd.xml

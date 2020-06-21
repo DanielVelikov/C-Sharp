@@ -1,0 +1,29 @@
+{
+  "version": 2,
+  "dgSpecHash": "tUsM/TVwEUahT72JKaKDRvgh/GJfeca7t5clRkiPNR1UYwymTbz5i4fnXxofRITa38z6Uqy9Uzinc+012WKkSw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\d_ger\\source\\repos\\winapp\\winapp\\winapp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\d_ger\\.nuget\\packages\\microsoft.net.native.compiler\\2.0.3\\microsoft.net.native.compiler.2.0.3.nupkg.sha512",
+    "C:\\Users\\d_ger\\.nuget\\packages\\microsoft.net.native.sharedlibrary-arm\\2.0.0\\microsoft.net.native.sharedlibrary-arm.2.0.0.nupkg.sha512",
+    "C:\\Users\\d_ger\\.nuget\\packages\\microsoft.net.native.sharedlibrary-x64\\2.0.0\\microsoft.net.native.sharedlibrary-x64.2.0.0.nupkg.sha512",
+    "C:\\Users\\d_ger\\.nuget\\packages\\microsoft.net.native.sharedlibrary-x86\\2.0.0\\microsoft.net.native.sharedlibrary-x86.2.0.0.nupkg.sha512",
+    "C:\\Users\\d_ger\\.nuget\\packages\\microsoft.net.uwpcoreruntimesdk\\2.1.2\\microsoft.net.uwpcoreruntimesdk.2.1.2.nupkg.sha512",
+    "C:\\Users\\d_ger\\.nuget\\packages\\microsoft.netcore.platforms\\2.0.0\\microsoft.netcore.platforms.2.0.0.nupkg.sha512",
+    "C:\\Users\\d_ger\\.nuget\\packages\\microsoft.netcore.universalwindowsplatform\\6.0.8\\microsoft.netcore.universalwindowsplatform.6.0.8.nupkg.sha512",
+    "C:\\Users\\d_ger\\.nuget\\packages\\netstandard.library\\2.0.1\\netstandard.library.2.0.1.nupkg.sha512",
+    "C:\\Users\\d_ger\\.nuget\\packages\\runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform\\6.0.8\\runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform.6.0.8.nupkg.sha512",
+    "C:\\Users\\d_ger\\.nuget\\packages\\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk\\2.1.2\\runtime.win10-arm.microsoft.net.uwpcoreruntimesdk.2.1.2.nupkg.sha512",
+    "C:\\Users\\d_ger\\.nuget\\packages\\runtime.win10-arm.microsoft.netcore.universalwindowsplatform\\6.0.8\\runtime.win10-arm.microsoft.netcore.universalwindowsplatform.6.0.8.nupkg.sha512",
+    "C:\\Users\\d_ger\\.nuget\\packages\\runtime.win10-x64-aot.microsoft.netcore.universalwindowsplatform\\6.0.8\\runtime.win10-x64-aot.microsoft.netcore.universalwindowsplatform.6.0.8.nupkg.sha512",
+    "C:\\Users\\d_ger\\.nuget\\packages\\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk\\2.1.2\\runtime.win10-x64.microsoft.net.uwpcoreruntimesdk.2.1.2.nupkg.sha512",
+    "C:\\Users\\d_ger\\.nuget\\packages\\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\\6.0.8\\runtime.win10-x64.microsoft.netcore.universalwindowsplatform.6.0.8.nupkg.sha512",
+    "C:\\Users\\d_ger\\.nuget\\packages\\runtime.win10-x86-aot.microsoft.netcore.universalwindowsplatform\\6.0.8\\runtime.win10-x86-aot.microsoft.netcore.universalwindowsplatform.6.0.8.nupkg.sha512",
+    "C:\\Users\\d_ger\\.nuget\\packages\\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk\\2.1.2\\runtime.win10-x86.microsoft.net.uwpcoreruntimesdk.2.1.2.nupkg.sha512",
+    "C:\\Users\\d_ger\\.nuget\\packages\\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\\6.0.8\\runtime.win10-x86.microsoft.netcore.universalwindowsplatform.6.0.8.nupkg.sha512",
+    "C:\\Users\\d_ger\\.nuget\\packages\\winrtxamltoolkit\\2.3.0\\winrtxamltoolkit.2.3.0.nupkg.sha512",
+    "C:\\Users\\d_ger\\.nuget\\packages\\winrtxamltoolkit.controls.datavisualization\\2.3.0\\winrtxamltoolkit.controls.datavisualization.2.3.0.nupkg.sha512",
+    "C:\\Users\\d_ger\\.nuget\\packages\\winrtxamltoolkit.controls.datavisualization.uwp\\2.3.0\\winrtxamltoolkit.controls.datavisualization.uwp.2.3.0.nupkg.sha512"
+  ],
+  "logs": []
+}

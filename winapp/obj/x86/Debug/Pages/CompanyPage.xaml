@@ -1,0 +1,99 @@
+﻿<Page
+    x:Class="winapp.CompanyPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:winapp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <RelativePanel Margin="0,0,0,5">
+            <TextBlock x:ConnectionId='7' Name="TitleTextBlock"
+                       Text="About Us"
+                       FontWeight="Medium"
+                       FontSize="32"
+                       RelativePanel.AlignHorizontalCenterWithPanel="True"
+                       RelativePanel.AlignVerticalCenterWithPanel="True"/>
+        </RelativePanel>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="130"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <RelativePanel>
+                <Ellipse x:ConnectionId='4' Name="Par1Icon"  Height="110" Width="110" Margin="10,90,0,0" RelativePanel.AlignTopWithPanel="True" VerticalAlignment="Center">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="Images/apple.png"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Ellipse x:ConnectionId='5' Name="Par2Icon"  Height="110" Width="110" Margin="10,110,0,0" RelativePanel.Below="Par1Icon" VerticalAlignment="Center">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="Images/android.png"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+                <Ellipse x:ConnectionId='6' Name="Par3Icon"  Height="110" Width="110" Margin="10,135,0,0" RelativePanel.Below="Par2Icon" VerticalAlignment="Center">
+                    <Ellipse.Fill>
+                        <ImageBrush ImageSource="Images/windows.png"/>
+                    </Ellipse.Fill>
+                </Ellipse>
+            </RelativePanel>
+            <StackPanel Grid.Column="1" Orientation="Vertical">
+                <StackPanel Margin="10,60,35,30" Visibility="Visible">
+                    <TextBlock Foreground="Black" TextWrapping="Wrap" FontSize="24" TextAlignment="Left" FontFamily="Segoe UI">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Duis fringilla, libero a pellentesque semper,
+                        mi erat cursus dui, quis molestie sem est eget ex.
+                        Morbi ut diam eu nisi tristique molestie. Donec in nibh ultricies,
+                        convallis dui nec, ornare ex. Quisque ultricies ac urna faucibus vestibulum.
+                        Pellentesque sed nibh eget erat finibus efficitur.
+                        Sed eget lectus viverra, aliquet est et, rutrum metus.
+                    </TextBlock>
+                </StackPanel>
+
+                <StackPanel Margin="10,30,35,60" Visibility="Visible">
+                    <TextBlock TextWrapping="Wrap" Foreground="Black" FontSize="24" TextAlignment="Left" FontFamily="Segoe UI">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fringilla, libero a pellentesque semper, mi erat cursus dui, quis molestie sem est eget ex. Morbi ut diam eu nisi tristique molestie. Donec in nibh ultricies, convallis dui nec, ornare ex. Quisque ultricies ac urna faucibus vestibulum. Pellentesque sed nibh eget erat finibus efficitur. Sed eget lectus viverra, aliquet est et, rutrum metus.
+                    </TextBlock>
+                </StackPanel>
+
+                <StackPanel Margin="10,30,35,60" Visibility="Visible">
+                    <TextBlock TextWrapping="Wrap" Foreground="Black" FontSize="24" TextAlignment="Left" FontFamily="Segoe UI">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis fringilla, libero a pellentesque semper, mi erat cursus dui, quis molestie sem est eget ex. Morbi ut diam eu nisi tristique molestie. Donec in nibh ultricies, convallis dui nec, ornare ex. Quisque ultricies ac urna faucibus vestibulum. Pellentesque sed nibh eget erat finibus efficitur. Sed eget lectus viverra, aliquet est et, rutrum metus.
+                    </TextBlock>
+                </StackPanel>
+            </StackPanel>
+
+            <RelativePanel Grid.Column="2">
+                <TextBlock x:ConnectionId='1' Margin="0,60,0,30" Name="SideTitleTextBlock" TextWrapping="Wrap" Foreground="Black" RelativePanel.AlignTopWithPanel="True" FontSize="24" TextAlignment="Left" FontFamily="Segoe UI">
+                   Pellentesque sed nibh eget erat finibus efficitur. Sed eget lectus viverra, aliquet est et, rutrum metus.
+                </TextBlock>
+                <Image x:ConnectionId='2' Name="SideImage" Margin="0,60,0,60" Source="Images/companyPage.jpg" Stretch="Uniform" RelativePanel.Below="SideTitleTextBlock"></Image>
+                <RichTextBlock x:ConnectionId='3' FontWeight="Medium" Name="Contacts" TextWrapping="Wrap" Foreground="Black" RelativePanel.Below="SideImage" FontSize="22" TextAlignment="Left" FontFamily="Segoe UI">
+                    <Paragraph>Contact Information</Paragraph>
+                    <Paragraph>Email: velikov.daniel1401@gmail.com</Paragraph>
+                    <Paragraph>Phone Number: 087 787 7851, area code +359</Paragraph>
+                </RichTextBlock>
+            </RelativePanel>
+
+        </Grid>
+
+        <StackPanel Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Visible">
+            <RichTextBlock Foreground="Black" FontSize="16" TextAlignment="Center" FontFamily="Segoe UI">
+                <Paragraph>Copyright © Daniel Velikov. All rights reserved.</Paragraph>
+                <Paragraph>For more features please reach me at 087 787 7851</Paragraph>
+            </RichTextBlock>
+        </StackPanel>
+    </Grid>
+</Page>
+

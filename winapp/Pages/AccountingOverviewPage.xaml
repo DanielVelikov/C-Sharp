@@ -1,0 +1,195 @@
+﻿<Page
+    x:Class="winapp.Pages.AccountingOverviewPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:winapp.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Charting="using:WinRTXamlToolkit.Controls.DataVisualization.Charting"
+    mc:Ignorable="d" Loaded="Page_Loaded"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <ScrollViewer Name="MainScrollViewer"
+                  HorizontalScrollMode="Enabled"
+                  HorizontalScrollBarVisibility="Auto"
+                  IsHorizontalRailEnabled="True"
+                  VerticalScrollMode="Enabled"
+                  VerticalScrollBarVisibility="Auto"
+                  IsVerticalRailEnabled="True">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="100" />
+            </Grid.RowDefinitions>
+
+            <RelativePanel Margin="0,0,0,5">
+                <TextBlock Name="TitleTextBlock"
+                       Text="Accounting Overview"
+                       FontSize="32"
+                       RelativePanel.AlignHorizontalCenterWithPanel="True"
+                       RelativePanel.AlignVerticalCenterWithPanel="True"/>
+            </RelativePanel>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0" Grid.Row="1"
+                    Margin="10,0,5,0"
+                    Name="AccountingManagementButton"
+                    Content="Manage Transactions" 
+                    HorizontalAlignment="Stretch" 
+                    VerticalAlignment="Stretch"
+                    Style="{StaticResource AccentButtonStyle}"
+                    Click="AccountingManagementButton_Click"/>
+
+                <Button Grid.Column="1" Grid.Row="1"
+                    Margin="5,0,10,0"
+                    Name="ProjectsOverviewButton"
+                    Content="Projects Overview" 
+                    HorizontalAlignment="Stretch" 
+                    VerticalAlignment="Stretch"
+                    Style="{StaticResource AccentButtonStyle}"
+                    Click="ProjectsOverviewButton_Click"/>
+            </Grid>
+
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <GridView Grid.Row="2" Grid.Column="0"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"
+                  Margin="10,10,5,10"
+                  IsItemClickEnabled="False"
+                  IsHitTestVisible="False">
+
+                    <Grid Margin="10,10,5,10" Height="500" Width="400">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Left">
+                            <TextBlock Text="Overview of Transactions by type"        
+                                   TextWrapping="Wrap"
+                                   Width="280"
+                                   FontWeight="Bold"
+                                   FontSize="16"
+                                   Name="PieTitleTextBlock"/>
+                            <TextBlock Text="Transaction types are as follows:
+                                   - Revenue
+                                   - Deduction"
+                                   TextWrapping="Wrap"
+                                   Width="200" 
+                                   FontWeight="Medium"/>
+                        </StackPanel>
+                        <Charting:Chart x:Name="ColumnChart" 
+                                    HorizontalAlignment="Center" 
+                                    Grid.Row="1" 
+                                    VerticalAlignment="Center" 
+                                    Width="399"
+                                    Height="400">
+                            <Charting:ColumnSeries Title="Transactions By Type" 
+                                        Margin="0" 
+                                        IndependentValuePath="transactionTypeName" 
+                                        DependentValuePath="transactionsCount" 
+                                        IsSelectionEnabled="True"/>
+                        </Charting:Chart>
+                    </Grid>
+                </GridView>
+
+                <GridView Grid.Row="2" Grid.Column="1"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"
+                  Margin="10,10,5,10"
+                  IsItemClickEnabled="False"
+                  IsHitTestVisible="False">
+
+                    <Grid Margin="10,10,5,10" Height="500" Width="500">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Left">
+                            <TextBlock Text="Overview of Transactions by Account"        
+                                   TextWrapping="Wrap"
+                                   Width="280"
+                                   FontWeight="Bold"
+                                   FontSize="16"/>
+                            <TextBlock Text="Transactions Accounts are as follows:
+                                   - Заплати
+                                   - Поддръжка
+                                   - Bonus System
+                                   - Projects Income"
+                                   TextWrapping="Wrap"
+                                   Width="200" 
+                                   FontWeight="Medium"/>
+                        </StackPanel>
+                        <Charting:Chart x:Name="LineChart" 
+                                    HorizontalAlignment="Center" 
+                                    Grid.Row="1" 
+                                    VerticalAlignment="Center" 
+                                    Width="500"
+                                    Height="400">
+                            <Charting:LineSeries Title="Transactions By Account" 
+                                        Margin="0" 
+                                        IndependentValuePath="transactionAccountName" 
+                                        DependentValuePath="transactionsCount" 
+                                        IsSelectionEnabled="True"/>
+                        </Charting:Chart>
+                    </Grid>
+                </GridView>
+
+                <GridView Grid.Row="2" Grid.Column="2"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"
+                  Margin="10,10,5,10"
+                  IsItemClickEnabled="True"
+                  IsHitTestVisible="false">
+
+                    <Grid Margin="10,10,5,10" Height="500" Width="400">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Left">
+                            <TextBlock Text="Overview of Transactions by Project"        
+                                   TextWrapping="Wrap"
+                                   Width="280"
+                                   FontWeight="Bold"
+                                   FontSize="16"/>
+                            <TextBlock Text="Remark - Only Projects with assigned Transactions are shown"
+                                   TextWrapping="Wrap"
+                                   Width="200" 
+                                   FontWeight="Medium"/>
+                        </StackPanel>
+                        <Charting:Chart x:Name="PieChart" 
+                                    HorizontalAlignment="Center" 
+                                    Grid.Row="1" 
+                                    VerticalAlignment="Center" 
+                                    Width="399"
+                                    Height="400">
+                            <Charting:PieSeries Title="Accounts By Account" 
+                                        Margin="0" 
+                                        IndependentValuePath="transactionProjectName" 
+                                        DependentValuePath="transactionsCount" 
+                                        IsSelectionEnabled="True"/>
+                        </Charting:Chart>
+                    </Grid>
+                </GridView>
+            </Grid>
+            <StackPanel Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Visible">
+                <RichTextBlock Foreground="Black" FontSize="16" TextAlignment="Center" FontFamily="Segoe UI">
+                    <Paragraph>Copyright © Daniel Velikov. All rights reserved.</Paragraph>
+                    <Paragraph>For more features please reach me at 087 787 7851</Paragraph>
+                </RichTextBlock>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Page>

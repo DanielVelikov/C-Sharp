@@ -1,0 +1,52 @@
+﻿<ContentDialog
+    x:Class="winapp.Pages.Project_Dialogs.AddProjectDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:winapp.Pages.Project_Dialogs"
+    xmlns:data ="using:winapp.Classes"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="New Project"
+    PrimaryButtonText="Submit"
+    SecondaryButtonText="Cancel"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    SecondaryButtonClick="ContentDialog_SecondaryButtonClick">
+
+    <Grid>
+        <Grid MaxHeight="300">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBox Grid.Row="0" Name="ProjectNameTextBox" Header="Project Name" PlaceholderText="Project Name" Height="Auto" Width="225"/>
+            <StackPanel Margin="0,25,0,0" Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="Project Start Date"/>
+                <DatePicker Name="StartDateControl" MinWidth="225"/>
+            </StackPanel>
+
+            <StackPanel MaxWidth="250" Margin="0,25,0,0" Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="Project End Date"/>
+                <DatePicker Name="EndDateControl" MinWidth="225"/>
+            </StackPanel>
+
+            <StackPanel Margin="0,25,0,0" Grid.Row="3" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <ComboBox Name="ProjectSizeComboBox" 
+                          Header="Choose Project Size" 
+                          MinWidth="225"
+                          ItemsSource="{x:Bind projectSizesTable.ProjectSizesList}">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate x:DataType="data:ProjectSizes">
+                            <StackPanel>
+                                <TextBlock Text="{x:Bind szProjectSize}"></TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </StackPanel>                
+               
+        </Grid>
+    </Grid>
+</ContentDialog>

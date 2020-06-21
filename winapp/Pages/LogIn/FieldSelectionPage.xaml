@@ -1,0 +1,82 @@
+﻿<Page
+    x:Class="winapp.Pages.LogIn.FieldSelectionPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:winapp.Pages.LogIn"
+    xmlns:data="using:winapp.Classes" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <ScrollViewer Name="MainScrollViewer"
+                  HorizontalScrollMode="Enabled"
+                  HorizontalScrollBarVisibility="Auto"
+                  IsHorizontalRailEnabled="True"
+                  VerticalScrollMode="Enabled"
+                  VerticalScrollBarVisibility="Auto"
+                  IsVerticalRailEnabled="True">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+            <RelativePanel>
+                <TextBlock Name="TitleTextBlock"
+                       Text="Welcome!"
+                       FontSize="24"
+                           FontWeight="SemiBold"
+                       RelativePanel.AlignHorizontalCenterWithPanel="True"
+                       RelativePanel.AlignVerticalCenterWithPanel="True"/>
+            </RelativePanel>
+            <RelativePanel Grid.Row="1">
+                <TextBlock Margin="20"
+                       Text="Please choose field and company to sign in !"
+                       FontSize="16"
+                           FontWeight="Medium"
+                       RelativePanel.AlignLeftWithPanel="True"
+                       RelativePanel.AlignVerticalCenterWithPanel="True"/>
+            </RelativePanel>
+            <GridView Grid.Row="2" ItemsSource="{x:Bind fieldTable.FieldsList}" 
+                          Name="FieldsItemGridView"
+                          HorizontalAlignment="Stretch"
+                          Margin="10"
+                          x:DefaultBindMode="OneWay"
+                          IsItemClickEnabled="True"
+                          SelectionMode="Single"
+                          Tapped="FieldsItemGridView_Tapped">
+                <GridView.ItemTemplate>
+                    <DataTemplate x:DataType="data:Fields">
+                        <Grid Background ="White" 
+                          Margin="10"
+                          Height="200"
+                          Width="200"
+                          BorderThickness="0,0,0,1.5"
+                          BorderBrush="{StaticResource InkToolbarAccentColorThemeBrush}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="175"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Image Name="TableImage" Source="{x:Bind szImage}" Stretch="UniformToFill"/>
+                            <RelativePanel Grid.Row="1">
+                                <TextBlock Text="{x:Bind szName}"
+                                       RelativePanel.AlignBottomWithPanel="True"
+                                       FontWeight="Medium"
+                                       RelativePanel.AlignHorizontalCenterWithPanel="True"/>
+                            </RelativePanel>
+                        </Grid>
+                    </DataTemplate>
+                </GridView.ItemTemplate>
+            </GridView>
+            <Frame Grid.Row="3" Name="LogInFrame"></Frame>
+            <StackPanel Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Visible">
+                <RichTextBlock Foreground="Black" FontSize="16" TextAlignment="Center" FontFamily="Segoe UI">
+                    <Paragraph>Copyright © Daniel Velikov. All rights reserved.</Paragraph>
+                    <Paragraph>For more features please reach me at 087 787 7851</Paragraph>
+                </RichTextBlock>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Page>

@@ -1,0 +1,19 @@
+﻿<ContentDialog
+    x:Class="winapp.Classes.LogInDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:winapp.Classes"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="Please sign in"
+    PrimaryButtonText="Log In"
+    SecondaryButtonText="Cancel"
+    PrimaryButtonClick="ContentDialog_PrimaryButtonClick"
+    SecondaryButtonClick="ContentDialog_SecondaryButtonClick">
+    <StackPanel>
+        <TextBox Name="UsernameTextBox" Header="Username" PlaceholderText="Please enter username" Width="250"/>
+        <PasswordBox Name="PasswordTextBox" Header="Password" PlaceholderText="Please enter password" Width="250"/>
+        <TextBlock Name="errorTextBlock" HorizontalAlignment="Center"/>
+    </StackPanel>
+</ContentDialog>
